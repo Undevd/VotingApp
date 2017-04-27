@@ -1,0 +1,42 @@
+{
+  "name": "voting-app",
+  "version": "1.0.0",
+  "description": "An application to be used for voting in upcoming hackathon",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroish/VotingApp.git"
+  },
+  "keywords": [
+    "vote",
+    "angularjs"
+  ],
+  "author": "Scott Hulme",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "graceful-fs": "^4.1.6",
+    "gulp": "^3.9.1",
+    "lodash": "^4.15.0",
+    "minimatch": "^3.0.3",
+    "mongoose": "^4.5.10",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.10.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-beta6",
+    "stylus": "^0.54.5"
+  },
+  "bugs": {
+    "url": "https://github.com/zeroish/VotingApp/issues"
+  },
+  "homepage": "https://github.com/zeroish/VotingApp#readme"
+}
