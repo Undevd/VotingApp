@@ -9,8 +9,10 @@ html(ng-app='app')
         link(rel="stylesheet" href="/css/site.css")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed")
     body.ng-cloak
+        header.container
+            img(ng-src="images/Digital.jpg" class="digial-logo")
         block main-content
         footer.container.text-center
-            img(ng-src="images/allthethings.png")
+            img(ng-src="images/Hackathon-pic.jpg")
             div(ng-controller="mvVoteCtrl")
         include scripts

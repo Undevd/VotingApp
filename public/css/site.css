@@ -122,8 +122,8 @@ footer p {
   border-top: 1px solid #000;
 }
 footer img {
-  width: 10pc;
-  height: 10pc;
+  width: 20pc;
+  height: auto;
 }
 h1,
 h2,
@@ -290,4 +290,9 @@ span.multi-line:empty:before {
 }
 .wellb {
   margin-bottom: 1em;
+}
+
+header img {
+  width: 10pc;
+  height: auto;
 }

@@ -6,8 +6,17 @@
                 .col-md-10
                     input.form-control(name="voter", type="text", placeholder="Who goes there?", required, ng-model="voter")
             div(ng-show="isListed(voter)")
+                div
+                    legend Categories
+                        div(ng-repeat="category in categories")
+                            p <b>{{category.name}}</b>: {{category.description}}
                 fieldset(ng-repeat="thing in things" ng-hide="isMemberOf(voter, '{{thing.name}}') || '{{thing.name}}' == 'Others' || voter == ''")
-                    legend {{thing.name}}
+                    span(class="label label-success") {{thing.name}}
+                    p {{thing.description}}
+                    h2 Team Members
+                    .form-group(ng-repeat="member in thing.members")
+                        ul(class="list-group")
+                            li(class="list-group-item list-group-item-info") {{member.name}}
                     .form-group
                         label.col-md-2.control-label(for="concept") Concept
                         .col-md-10
@@ -37,6 +46,20 @@
                                 option(value="9") 9
                                 option(value="10") 10
                     .form-group
+                        label.col-md-2.control-label(for="technical") Technical Novelty
+                        .col-md-10
+                            select.form-control(id="thing.name-concept" name="technical" ng-model="scores[thing.name]['technical']")
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3") 3
+                                option(value="4") 4
+                                option(value="5") 5
+                                option(value="6") 6
+                                option(value="7") 7
+                                option(value="8") 8
+                                option(value="9") 9
+                                option(value="10") 10
+                    .form-group
                         label.col-md-2.control-label(for="presentation") Presentation
                         .col-md-10
                             select.form-control(id="thing.name-concept" name="presentation" ng-model="scores[thing.name]['presentation']")
@@ -50,11 +73,7 @@
                                 option(value="8") 8
                                 option(value="9") 9
                                 option(value="10") 10
-                    .form-group(ng-repeat="member in thing.members")
-                        label.col-md-2.control-label() {{member.name}}
                 .form-group
                     .col-md-10.col-md-offset-2
                         .pull-right
                             button.btn.btn-primary(ng-click="vote(voteForm)", ng-disabled="voteForm.$invalid") Vote
-                            | &nbsp;
-                            a.btn.btn-default(href="/") Cancel

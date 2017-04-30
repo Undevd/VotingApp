@@ -33,10 +33,12 @@ angular.module('app').controller('mvResultCtrl', function($scope, $location, mvV
         
         for(i = 0; i < $scope.results.length; i++) {
             var r = $scope.results[i];
-            r.total = (r.concept, r.implementation, r.presentation) / r.count
+            
             r.concept /= r.count;
             r.implementation /= r.count;
             r.presentation /= r.count;
+
+            r.total = r.concept + r.implementation + r.presentation
         }
         
     });
