@@ -4,16 +4,23 @@ body {
   color: #144357;
 }
 header img {
-  width: 10pc;
+  width: 15pc;
   height: auto;
 }
 footer img {
-  width: 10pc;
+  width: 20pc;
   height: auto;
+}
+.home {
+  text-align: center;
 }
 h1 {
   color: #3baa34;
 }
 ul {
   margin: 5px;
+}
+img {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
