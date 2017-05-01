@@ -89,6 +89,7 @@ angular.module('app').controller('mvVoteCtrl', function($scope, $location, dbOps
                 project: score,
                 concept: $scope.scores[score]['concept'],
                 implementation: $scope.scores[score]['implementation'],
+                technical: $scope.scores[score]['technical'],
                 presentation: $scope.scores[score]['presentation'],
             };
             

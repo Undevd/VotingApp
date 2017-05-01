@@ -5,6 +5,7 @@ var voteSchema = mongoose.Schema({
     project: {type:String, required:'{PATH} is required'},
     concept: { type:Number, required:'{PATH} is required'},
     implementation: { type:Number, required:'{PATH} is required'},
+    technical: { type:Number, required:'{PATH} is required'},
     presentation: { type:Number, required:'{PATH} is required'},
 });
 

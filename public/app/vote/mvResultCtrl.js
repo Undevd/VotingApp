@@ -18,6 +18,7 @@ angular.module('app').controller('mvResultCtrl', function($scope, $location, mvV
                     project: tuple.project,
                     concept: 0,
                     implementation: 0,
+                    technical: 0,
                     presentation: 0,
                     total: 0,
                     count: 0
@@ -27,6 +28,7 @@ angular.module('app').controller('mvResultCtrl', function($scope, $location, mvV
             
             r.concept = (r.concept + Number(tuple.concept));
             r.implementation = (r.implementation + Number(tuple.implementation))
+            r.technical = (r.technical + Number(tuple.technical))
             r.presentation = (r.presentation + Number(tuple.presentation))
             r.count++;
         }
@@ -36,9 +38,10 @@ angular.module('app').controller('mvResultCtrl', function($scope, $location, mvV
             
             r.concept /= r.count;
             r.implementation /= r.count;
+            r.technical /= r.count;
             r.presentation /= r.count;
 
-            r.total = r.concept + r.implementation + r.presentation
+            r.total = r.concept + r.implementation + r.technical + r.presentation
         }
         
     });

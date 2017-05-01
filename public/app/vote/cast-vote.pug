@@ -7,16 +7,16 @@
                     input.form-control(name="voter", type="text", placeholder="Who goes there?", required, ng-model="voter")
             div(ng-show="isListed(voter)")
                 div
-                    legend Categories
-                        div(ng-repeat="category in categories")
-                            p <b>{{category.name}}</b>: {{category.description}}
+                    h1 Categories
+                    div(ng-repeat="category in categories")
+                        p <b>{{category.name}}</b>: {{category.description}}
                 fieldset(ng-repeat="thing in things" ng-hide="isMemberOf(voter, '{{thing.name}}') || '{{thing.name}}' == 'Others' || voter == ''")
-                    span(class="label label-success") {{thing.name}}
+                    h1 {{thing.name}}
                     p {{thing.description}}
-                    h2 Team Members
+                    legend Team Members
                     .form-group(ng-repeat="member in thing.members")
-                        ul(class="list-group")
-                            li(class="list-group-item list-group-item-info") {{member.name}}
+                        ul
+                            li {{member.name}}
                     .form-group
                         label.col-md-2.control-label(for="concept") Concept
                         .col-md-10
