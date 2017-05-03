@@ -24,31 +24,59 @@ angular.module('app').controller('mvVoteCtrl', function($scope, $location, dbOps
 
     $scope.things = [
         {
-            name: "Project 1",
-            description: "This is a project aimed at being the first project on the screen",
+            name: "Coding For Food",
+            description: "",
             members: [
                 {
-                    name: "Scott Hulme",
+                    name: "scott hulme",
                     captain: "true"
                 },
-                {name: "Raymond Henry"}
+                {name: "Chris Kane"},
+                {name: "Michael Purdy"},
         ]},
         {
-            name: "Project 2",
-            description: "This is a project which wishes to be the first on the screen but is content with second",
+            name: "Youse’uns Want Lunch",
+            description: "",
             members: [
                 {
-                    name: "Henry Rodgers",
+                    name: "laura soutar",
                     captain: "true",
                 }
         ]},
         {
-            name: "Project 3",
-            description: "This is a project which wishes to be the first on the screen but is content with third",
+            name: "Left4Dev",
+            description: "",
             members: [
                 {
-                    name: "Star Lord",
+                    name: "niall mckeown",
                     captain: "true"
+                }
+        ]},
+        {
+            name: "Toni&Guys",
+            description: "",
+            members: [
+                {
+                    name: "toni kim",
+                    captain: "true",
+                }
+        ]},
+        {
+            name: "Google's Home Boyz!",
+            description: "",
+            members: [
+                {
+                    name: "colin campbell",
+                    captain: "true",
+                }
+        ]},
+        {
+            name: "ZZ Bottom",
+            description: "",
+            members: [
+                {
+                    name: "emily lawes",
+                    captain: "true",
                 }
         ]}
     ]
