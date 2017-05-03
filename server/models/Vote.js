@@ -9,7 +9,7 @@ var voteSchema = mongoose.Schema({
     presentation: { type:Number, required:'{PATH} is required'},
 });
 
-voteSchema.index({voter: 1, project: 1, unique: true}, {unqiue: true});
+voteSchema.index({voter: 1, project: -1}, {unqiue: true});
 
 voteSchema.methods = { };
 
